@@ -1,0 +1,7 @@
+.boxItens {
+    width: 40vw;
+    margin-top: 10px;
+    font-weight: bold;
+    border-radius: 8px; 
+    background-color: yellow;
+}

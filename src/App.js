@@ -9,16 +9,23 @@ import './App.css';
 // import Conditions from './components/Conditions'
 // import Group from './components/Group'
 
-import { useState } from 'react';
+// import { useState } from 'react';
 
-import StateLift from './components/StateLift'
-import Greetings from './components/Greetings'
+// import StateLift from './components/StateLift'
+// import Greetings from './components/Greetings'
+
+import { BrowserRouter as Router, Switch, Route } from 'react-router-dom'
+import Home from './components/pages/Home'
+import Company from './components/pages/Company'
+import Contact from './components/pages/Contact'
+import Navbar from './components/layout/Navbar';
+import Footer from './components/layout/Footer';
 
 function App() {
 
   // const equipes = ['Brasil', 'Alemanha', 'Argentina']
 
-  const [nome, setNome] = useState()
+  // const [nome, setNome] = useState()
 
   return (
     <div className="App">
@@ -31,8 +38,28 @@ function App() {
       <Conditions />
       <Group item={equipes} /> */}
 
-      <StateLift setNome={setNome} />
-      <Greetings nome={nome} />
+      {/* <StateLift setNome={setNome} />
+      <Greetings nome={nome} /> */}
+
+      <Router> 
+        <Navbar />
+
+        <Switch>
+          <Route exact path='/'>
+            <Home />
+          </Route>
+
+          <Route path='/empresa'>
+            <Company />
+          </Route>
+
+          <Route path='/contato'>
+            <Contact />
+          </Route>
+        </Switch>
+
+        <Footer />
+      </Router>
     </div>
   );
 }

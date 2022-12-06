@@ -4,11 +4,9 @@ function Greetings( {nome} ) {
         return  `O E-mail é:  ${varnome}!!`
     }
 
-    { nome && (
-    <>
-        <p> { sayGreetings(nome) } </p> 
-    </>
-    )}
+    { nome && 
+        ( <p> { sayGreetings(nome) } </p> )
+    }
     
 }
 

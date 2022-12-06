@@ -1,0 +1,7 @@
+.containerNavbar {
+    display: flex;
+}
+
+.containerNavbar li {
+    margin: 1em;
+}
